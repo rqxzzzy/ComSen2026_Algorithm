@@ -1,0 +1,91 @@
+# ============================================================
+# ComSen2026 算法组招新题 · 提交仓库
+# ============================================================
+
+# ---- 题目要求：GitHub 仓库只放代码 ----
+# 「除代码外文件（如视频、图片、报告）」按题目要求打包发到指定邮箱，不纳入仓库。
+# 报告与结果图仍在本地目录里（构建邮件包要用），只是不提交到 git。
+# 只保留 README.md 作为仓库入口（说明各 task 是干什么的）。
+**/REPORT.md
+**/REPORT.docx
+**/REPORT.pdf
+README.docx
+README.pdf
+task*/outputs/
+task*/weights/
+task*/runs/
+task*/data/
+
+# ---- 数据集：体积大且可从题目链接重新获取，不纳入版本控制 ----
+task3_MLP识别MNIST/data/
+task4_YOLO无人机检测/datasets/
+datasets/
+*.parquet
+*.npz
+
+# ---- 推理结果视频：体积大，已随报告打包发送到指定邮箱 ----
+*.mp4
+*.avi
+*.mov
+
+# ---- 训练过程的大体积中间产物 ----
+runs/**/train_batch*.jpg
+runs/**/val_batch*_labels.jpg
+runs/**/labels.jpg
+runs_split/
+runs_val/
+weights/yolo11n.pt
+weights/yolo11s.pt
+
+# ---- 下载缓存 ----
+*.zip
+*.json.tmp
+speedtest*
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---- 虚拟环境 ----
+.venv/
+venv/
+ENV/
+env/
+.python-version
+
+# ---- IDE ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# ---- 操作系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 模型权重的中间产物（保留下载即可重建的官方 COCO 权重）----
+*.onnx.tmp
+
+# ---- Word 临时锁文件（.docx 本身要提交，不忽略）----
+~$*.docx
